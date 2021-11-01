@@ -1,5 +1,5 @@
 function APIKeyRestaurants() {
-  return `9b697453fc8bff11c9d1ce507d48a482`;
+  return `ZzK+ZTtw+X/lttbuTL2mcA==K1QsunDdVwlNv2sY`;
 }
 
 export default APIKeyRestaurants;
