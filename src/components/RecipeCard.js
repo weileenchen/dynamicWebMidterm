@@ -2,7 +2,7 @@ import React from "react";
 
 function RecipeCard({ name = "Unknown", imageLink = "Unknown" }) {
   return (
-    <section>
+    <section className="Recipe">
       <div>
         <p>
           Recipe: <strong>{name}</strong>

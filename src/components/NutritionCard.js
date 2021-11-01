@@ -9,11 +9,7 @@ function NutritionCard({
   fiber = "Unknown",
 }) {
   return (
-    <section
-      style={{
-        backgroundColor: `rgb(174, 198, 207)`,
-      }}
-    >
+    <section className="Nutrition">
       <div>
         <p>
           Name: <strong>{name}</strong>

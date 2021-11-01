@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import axios from "axios";
-import APIKeyFood from "../components/APIKeyFood";
+import APIKeyFood from "../components/APIKeyRecipes";
 import RecipeCard from "../components/RecipeCard";
 
 const APIFood = APIKeyFood();
