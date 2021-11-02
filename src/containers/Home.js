@@ -93,7 +93,7 @@ function Home() {
   return (
     <main>
       <header className="Header">
-        <h1>{!food ? "FOOD FINDER" : food}</h1>
+        <h1>{!food ? "FOOD FACTS" : food}</h1>
         <div>
           Look at some of the most common foods and a random recipe that
           incorporates that food!

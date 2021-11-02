@@ -5,7 +5,7 @@ import Home from "./containers/Home";
 
 function App() {
   useEffect(() => {
-    document.title = "FOOD FINDER";
+    document.title = "FOOD FACTS";
   }, []);
   return (
     <Router>
