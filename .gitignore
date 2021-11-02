@@ -1,6 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-/src/components/APIKeyNutrition
-/src/components/APIKeyRecipes
+/src/components/APIKeyNutrition.js
+/src/components/APIKeyRecipes.js
 
 # dependencies
 /node_modules
