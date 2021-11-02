@@ -8,10 +8,15 @@
   text-align: center;
 }
 
+.Header h1 {
+  font-size: 50px;
+  margin: 25px auto;
+}
+
 .Navigation {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px;
+  margin: 30px;
 }
 
 .Navigation > a {
@@ -23,15 +28,127 @@
   color: black;
 }
 
+.NothingChosen {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+}
+
 .Details {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.Details > section {
+  min-width: 300px;
 }
 
 .Nutrition {
   margin: 75px;
+  margin-top: 25px;
+}
+
+.NutritionTable {
+  border: 1px solid black;
+  float: left;
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+}
+
+.NutritionHeader {
+  border-bottom: 10px solid black;
+}
+
+.NutritionHeader p {
+  margin: 10px auto;
+}
+
+.NutritionEnd {
+  border-top: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.NutritionTitle {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.NutritionFacts {
+  width: 100%;
+}
+
+thead th,
+td {
+  border: 0;
+}
+
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+  padding: 0.25rem 0;
+  border-top: 1px solid black;
+  white-space: nowrap;
+}
+
+.FirstFact {
+  border: none;
+}
+
+.IndentedCell {
+  width: 1rem;
+  border-top: 0;
+}
+
+.thick-row {
+  border-top-width: 5px;
+  padding: 0;
+}
+
+.SuperThickRow {
+  border-top-width: 10px;
+}
+
+.ThickEnd {
+  border-bottom: 10px solid black;
+}
+
+.SmallInfo {
+  font-size: 0.7rem;
 }
 
 .Recipe {
+  border: 1px solid black;
+  min-height: 400px;
+  max-height: 700px;
+  padding: 20px;
   margin: 75px;
+  margin-top: 25px;
+  width: 500px;
+}
+
+.Recipe img {
+  display: block;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  width: 70;
+}
+
+.RecipeTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Ingredient {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 10px;
+  width: 100%;
 }

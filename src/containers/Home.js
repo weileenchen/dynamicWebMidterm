@@ -56,31 +56,44 @@ function Home() {
     }
   }, [food]);
 
-  const { food_name, serving_size, calories, sugar, sodium, fiber } =
-    useMemo(() => {
-      if (!nutrition) return {};
-      return {
-        food_name: nutrition.name,
-        serving_size: nutrition.serving_size_g,
-        calories: nutrition.calories,
-        sugar: nutrition.sugar_g,
-        sodium: nutrition.sodium_mg,
-        fiber: nutrition.fiber_g,
-      };
-    }, [nutrition]);
+  const {
+    carbs,
+    cholesterol,
+    total_fat,
+    sat_fat,
+    calories,
+    sugar,
+    sodium,
+    fiber,
+    protein,
+  } = useMemo(() => {
+    if (!nutrition) return {};
+    return {
+      carbs: nutrition.carbohydrates_total_g,
+      cholesterol: nutrition.cholesterol_mg,
+      total_fat: nutrition.fat_total_g,
+      sat_fat: nutrition.fat_saturated_g,
+      calories: nutrition.calories,
+      sugar: nutrition.sugar_g,
+      sodium: nutrition.sodium_mg,
+      fiber: nutrition.fiber_g,
+      protein: nutrition.protein_g,
+    };
+  }, [nutrition]);
 
-  const { rec_name, imageLink } = useMemo(() => {
+  const { rec_name, imageLink, ingredients } = useMemo(() => {
     if (!recipe) return {};
     return {
       rec_name: recipe.title,
       imageLink: recipe.image,
+      ingredients: recipe.missedIngredients.concat(recipe.usedIngredients),
     };
   }, [recipe]);
 
   return (
     <main>
       <header className="Header">
-        <h1> FOOD FINDER</h1>
+        <h1>{!food ? "FOOD FINDER" : food}</h1>
         <div>
           Look at some of the most common foods and a random recipe that
           incorporates that food!
@@ -94,17 +107,28 @@ function Home() {
         <a href="/?food=Rice">Rice</a>
         <a href="/?food=Garlic">Garlic</a>
       </section>
-      <section className="Details">
-        <NutritionCard
-          name={food}
-          serving_size={serving_size}
-          calories={calories}
-          sugar={sugar}
-          sodium={sodium}
-          fiber={fiber}
-        />
-        <RecipeCard name={rec_name} imageLink={imageLink} />
-      </section>
+      {!food ? (
+        <div className="NothingChosen"> click a food! </div>
+      ) : (
+        <section className="Details">
+          <NutritionCard
+            carbs={carbs}
+            cholesterol={cholesterol}
+            total_fat={total_fat}
+            sat_fat={sat_fat}
+            calories={calories}
+            sugar={sugar}
+            sodium={sodium}
+            fiber={fiber}
+            protein={protein}
+          />
+          <RecipeCard
+            name={rec_name}
+            imageLink={imageLink}
+            ingredients={ingredients}
+          />
+        </section>
+      )}
     </main>
   );
 }
